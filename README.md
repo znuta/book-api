@@ -80,8 +80,8 @@ Create a .env file at the project root with necessary environment variables, suc
 Database Setup
 Ensure the database is set up and running. For TypeORM, run migrations to create tables based on entities.
 
-Postman or Swagger
-Utilize tools like Postman or Swagger to interact with the API. Test each endpoint's functionality and observe responses.
+Postman
+Utilize this Postman to interact with the API. https://www.postman.com/galactic-sunset-703784/workspace/bookstore/collection/9896510-0b20fe09-8663-4cb3-853b-5d3158834416
 
 Custom Response Handling
 Verify the correct implementation and usage of custom responses (CustomResponse, SuccessResponse, ErrorResponse) throughout the application. Ensure error and success responses adhere to defined structures.
