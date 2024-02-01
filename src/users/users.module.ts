@@ -11,7 +11,6 @@ import { User } from './entities/user.entity/user.entity';
 import { AuthService } from './auth.service';
 import { ConfigModule } from '@nestjs/config';
 
-console.log('JWT_KEY', process.env.JWT_KEY, process.env.DATABASE_NAME);
 @Module({
   imports: [
     ConfigModule.forRoot(),

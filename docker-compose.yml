@@ -5,14 +5,17 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      DATABASE_HOST: localhost
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: bookstore
+      MYSQL_USER: bookstore_user
+      MYSQL_PASSWORD: bookstore_password
+      DATABASE_HOST: mysql
       DATABASE_PORT: 3306
-      DATABASE_USERNAME: testuser1
-      DATABASE_PASSWORD: your_password
-      DATABASE_NAME: bookstore
       JWT_KEY: wenfwkjnwjwjwjj
     ports:
       - '3306:3306'
+    volumes:
+      - ./data/mysql:/var/lib/mysql
 
   app:
     build:
