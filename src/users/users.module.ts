@@ -9,12 +9,15 @@ import { LocalStrategy } from './strategy/local.strategy';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entities/user.entity/user.entity';
 import { AuthService } from './auth.service';
+import { ConfigModule } from '@nestjs/config';
 
+console.log('JWT_KEY', process.env.JWT_KEY, process.env.DATABASE_NAME);
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     PassportModule,
     JwtModule.register({
-      secret: process.env.JWT_KEY, // Replace with a strong secret key
+      secret: process.env.JWT_KEY!,
       signOptions: { expiresIn: '1h' },
     }),
     TypeOrmModule.forFeature([User]),
