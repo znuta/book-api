@@ -19,11 +19,11 @@ Follow these steps to run and test the NestJS application:
 
 - You have mysql server installed and setup on your local machine. or to run it on Docker, Docker and Docker Compose are installed on the host machine.
 
-### 4. Uncovered Requirements
+### Uncovered Requirements
 
 No requirements have been left uncovered.
 
-### 5. Source Code Configuration
+### Source Code Configuration
 
 1. Clone the repository:
 
@@ -42,6 +42,10 @@ cd book-api
 ```bash
 $ yarn install
 ```
+
+# Build and run the Docker containers.
+
+docker-compose up --build
 
 ## Running the app
 
@@ -88,7 +92,3 @@ Verify the correct implementation and usage of custom responses (CustomResponse,
 
 Environment Variables in Production
 In a production environment, securely set environment variables using a suitable method, such as through the hosting platform or a configuration file.
-
-# Build and run the Docker containers.
-
-docker-compose up --build
