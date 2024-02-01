@@ -51,10 +51,6 @@ export class AuthService {
    */
   async signIn(user: User): Promise<{ accessToken: string }> {
     const payload = { id: user.id, username: user.username, role: user.role };
-
-    // Log the payload for debugging purposes
-    console.log('user', payload);
-
     const accessToken = this.jwtService.sign(payload);
     return { accessToken };
   }

@@ -166,7 +166,6 @@ describe('BooksController', () => {
 
       const result = await booksController.remove(bookId.toString(), user);
       expect(result).toBeInstanceOf(OkSuccessResponse);
-      // You may choose to assert other properties of the success response
     });
 
     it('should handle errors and return BadRequestError', async () => {
